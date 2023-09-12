@@ -8,7 +8,7 @@ class GiftService {
     async getGifts() {
         let res = await api.get('api/gifts')
         AppState.gifts = res.data.map(gift => new Gift(gift))
-        logger.log(AppState.gifts[3])
+        logger.log(AppState.gifts)
     }
 
 }
